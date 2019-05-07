@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Biblioteca Virtual</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-16">
+      {% block sidebar %}
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Biblioteca Online</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'libros' %}">Libros</a></li>
+              <li><a href="{% url 'autores' %}">Autores</a></li>
+              <li><a href="{% url 'generos' %}">Generos</a></li>
+            </ul>
+          </div>
+        </nav>
+     {% endblock %}
+      </div>
+      <div class="col-sm-12 ">
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+</div>
+</body>
+</html>

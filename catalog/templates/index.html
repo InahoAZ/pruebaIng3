@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} <h1>Bienvenidos a la Biblioteca Virtual</h1> {% endblock %}
+
+{% block content %}
+<p>Cuentas :v </p>
+  <ul>
+    <li><strong>Libros:</strong> {{ num_book }}</li>
+    <li><strong>Numero de Instancias:</strong> {{ num_instances }}</li>
+    <li><strong>Numero de Autores:</strong> {{ num_author}}</li>
+    <li><strong>Libros disponibles:</strong> {{ libros_disponibles}}</li>
+  </ul>
+
+{% endblock %}
