@@ -24,11 +24,11 @@ def index(request):
                    'num_author': num_author,
                    'libros_disponibles': libros_disponibles})
 
-
+//Lleva a la vista de libros
 def libros(request):
     return render(request, 'libros.html')
 
-
+//Lleva a la vista de autores
 def autores(request):
     return render(request, 'autores.html')
 

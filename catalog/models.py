@@ -32,7 +32,7 @@ class Language(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=30, help_text="Titulo del Libro")
-    summary = models.TextField(max_length=40, help_text="Resumen del Libro")
+    summary = models.TextField(max_length=60, help_text="Resumen del Libro")
     imprint = models.CharField(max_length=20)
     isbn = models.CharField('ISBN', max_length=13)
     author = models.ManyToManyField(Author)
